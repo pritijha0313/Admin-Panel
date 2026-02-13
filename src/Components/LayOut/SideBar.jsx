@@ -1,6 +1,6 @@
 import React from "react";
 import dashboardIcon from "../../assets/Image/dashbord.png";
-import category from "../../assets/Image/Category.webp"
+import category from "../../assets/Image/cate.png"
 import subcategory from "../../assets/Image/subcategory.png";
 import services from "../../assets/Image/services.png";
 import settings from "../../assets/Image/settings.png";
