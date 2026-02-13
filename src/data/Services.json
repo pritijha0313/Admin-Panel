@@ -1,0 +1,30 @@
+ [
+  {
+    "title": "Web Development",
+    "description":
+      "Modern websites using React, Next.js, and Tailwind. Optimized, fast, and secure.",
+    "features": [
+      "Custom Business Website",
+      "Portfolio Website",
+      "Admin Dashboard",
+      "E-commerce Website"
+    ]
+  },
+  {
+    "title": "Mobile App Development",
+    "description":
+      "We build Android, iOS & cross-platform apps that scale beautifully.",
+    "features": [
+      "Flutter App",
+      "React-Native App",
+      "UI/UX Design",
+      "App Deployment Support"
+    ]
+  },
+  {
+    "title": "Graphic Designing",
+    "description":
+      "Creative visual designs to boost your brand identity and value.",
+    "features": ["Logo Design", "Poster Design", "Brand Kit", "Social Media Creatives"]
+  }
+]
