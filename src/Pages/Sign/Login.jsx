@@ -48,7 +48,7 @@ const Login = () => {
         <h2 className="text-2xl font-bold text-center mb-2 text-[#202224]">
           Login
         </h2>
-        <p className="text-center text-[#4D4E50] mb-10">Please</p>
+        <p className="text-center text-[#4D4E50] mb-10">Pleasewasedrftgh</p>
 
         {errors.general && (
           <p className="text-red-500 text-center mb-3">{errors.general}</p>
