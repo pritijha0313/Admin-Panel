@@ -35,8 +35,15 @@ const Register = () => {
     }
 
       const handleRegister = () => {
-        if(!validate()) return
-        navigate("/")
+        if(!validate()) return;
+
+
+        const users = JSON.parse(localStorage.getItem("user")) || [];
+        users.push({ email, username, password });
+         localStorage.setItem("user", JSON.stringify(users));
+
+         navigate("/login");
+
       }
   return (
      <div className="min-h-screen flex justify-center items-center bg-[#FFFFFF] p-4">
@@ -67,7 +74,7 @@ const Register = () => {
 
         <div>
             <input type='checkbox' checked={accept} onChange={(e) => {
-                setAccept(e.target.value)
+                setAccept(e.target.checked)
                 setError({...error,terms:""})
             }}
             />

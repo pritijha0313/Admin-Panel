@@ -34,12 +34,14 @@ const Login = () => {
       (u) => u.email === email && u.password === password
     );
 
-    if (!found) {
-      setErrors({ general: "Invalid email or password" });
-      return;
-    }
+   if (!found) {
+  setErrors({ general: "Invalid email or password" });
+  return;
+}
 
-    navigate("/dashboard");
+localStorage.setItem("loggedInUser", JSON.stringify(found));  // ADD THIS
+navigate("/dashboard");
+
   };
 
   return (
