@@ -3,6 +3,7 @@ import { categories as initialData } from "../../data/CategoryData";
 import CategoryHeader from "./CategoryHeader";
 import CategorySearch from "./CategorySearch";
 import CategoryTable from "./CategoryTable";
+import RichTextEditor from "../../Components/Common/RichTextEditor";
 
 const CategoryPage = () => {
   const [search, setSearch] = useState("");
@@ -33,7 +34,11 @@ const CategoryPage = () => {
 
       <CategorySearch search={search} setSearch={setSearch} />
 
-      <CategoryTable data={filterData} />
+      {/* <CategoryTable data={filterData} /> */}
+
+      <RichTextEditor label={"Enter Your Email Template"} required={true} height="500px"/>
+      <RichTextEditor label={"Enter Your Email Template"}  required={true} height="200px"/>
+     
     </div>
   );
 };

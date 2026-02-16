@@ -7,6 +7,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Services from './Pages/Services/Services';
 import CategoryPage from './Pages/Category/CategoryPage';
 import SubCategoryPage from './Pages/SubCategory/SubCategoryPage';
+import EmailTemplateForm from './Pages/Mail/EmailTemplateForm';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/services' element={<Services/>}/>
         <Route path='/category' element={<CategoryPage/>}/>
         <Route path='/subcategory' element={<SubCategoryPage/>}/>
+        <Route path='/mail' element={<EmailTemplateForm/>}/>
       </Route>
     </Routes>
   );

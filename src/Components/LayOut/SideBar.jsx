@@ -4,6 +4,7 @@ import category from "../../assets/Image/cate.png"
 import subcategory from "../../assets/Image/subcategory.png";
 import services from "../../assets/Image/services.png";
 import settings from "../../assets/Image/settings.png";
+import mail from '../../Pages/Mail/EmailTemplateForm'
 import { NavLink } from "react-router-dom";
 
 const SideBar = ({ collapsed }) => {
@@ -13,13 +14,13 @@ const SideBar = ({ collapsed }) => {
     { name: "Subcategory", path: "/subcategory", icon: subcategory },
     { name: "Services", path: "/services", icon: services },
     { name: "Settings", path: "/settings", icon: settings },
+    { name: "Mail Template", path: "/mail", icon: settings }
   ];
 
   return (
     <div
-      className={`bg-[#101557] text-white min-h-screen p-4 transition-all duration-300 ${
-        collapsed ? "w-20" : "w-64"
-      }`}
+      className={`bg-[#101557] text-white min-h-screen p-4 transition-all duration-300 ${collapsed ? "w-20" : "w-64"
+        }`}
     >
       <ul>
         {menu.map((item) => (
