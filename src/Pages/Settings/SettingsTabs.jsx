@@ -13,13 +13,13 @@ const SettingsTabs = ({ active, setActive }) => {
         <button
           key={tab.id}
           onClick={() => setActive(tab.id)}
-          className={`pb-2 text-sm font-medium ${
+          className={`pb-2 text-sm font-medium transition-all ${
             active === tab.id
               ? "border-b-2 border-blue-600 text-blue-600"
               : "text-gray-600 hover:text-black"
           }`}
         >
-          {active === tab.id ? "Save" : tab.label}
+          {tab.label}
         </button>
       ))}
     </div>

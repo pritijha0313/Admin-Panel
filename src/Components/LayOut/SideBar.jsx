@@ -1,26 +1,31 @@
 import React from "react";
-import dashboardIcon from "../../assets/Image/dashbord.png";
-import category from "../../assets/Image/cate.png"
-import subcategory from "../../assets/Image/subcategory.png";
-import services from "../../assets/Image/services.png";
-import settings from "../../assets/Image/settings.png";
-import mail from '../../Pages/Mail/EmailTemplateForm'
 import { NavLink } from "react-router-dom";
+
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGauge,        
+  faLayerGroup,   
+  faFolderTree,   
+  faListCheck,    
+  faGear,         
+  faEnvelope     
+} from "@fortawesome/free-solid-svg-icons";
 
 const SideBar = ({ collapsed }) => {
   const menu = [
-    { name: "Dashboard", path: "/dashboard", icon: dashboardIcon },
-    { name: "Category", path: "/category", icon: category },
-    { name: "Subcategory", path: "/subcategory", icon: subcategory },
-    { name: "Services", path: "/services", icon: services },
-    { name: "Settings", path: "/settings", icon: settings },
-    { name: "Mail Template", path: "/mail", icon: settings }
+    { name: "Dashboard", path: "/dashboard", icon: faGauge },
+    { name: "Category", path: "/category", icon: faLayerGroup },
+    { name: "Subcategory", path: "/subcategory", icon: faFolderTree },
+    { name: "Services", path: "/services", icon: faListCheck },
+    { name: "Settings", path: "/settings", icon: faGear },
+    { name: "Mail Template", path: "/mail", icon: faEnvelope },
   ];
 
   return (
     <div
-      className={`bg-[#101557] text-white min-h-screen p-4 transition-all duration-300 ${collapsed ? "w-20" : "w-64"
-        }`}
+      className={`bg-[#101557] text-white min-h-screen p-4 transition-all duration-300 
+      ${collapsed ? "w-20" : "w-64"}`}
     >
       <ul>
         {menu.map((item) => (
@@ -28,11 +33,11 @@ const SideBar = ({ collapsed }) => {
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `group flex items-center gap-3 px-3 py-2 rounded-lg transition-all relative 
+              `group flex items-center gap-3 px-3 py-2 rounded-lg transition-all relative
               ${isActive ? "bg-[#4880FF]" : "hover:bg-[#2e2a7a]"}`
             }
           >
-            <img src={item.icon} alt="" className="w-5 h-5" />
+            <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
 
             {!collapsed && <span>{item.name}</span>}
 
