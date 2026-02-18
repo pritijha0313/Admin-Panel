@@ -1,14 +1,17 @@
-import React from 'react'
-import InputField from '../../Components/Common/InputField'
+import React from "react";
+import InputField from "../../Components/Common/InputField";
 
-const CategorySearch = ({search,setSearch}) => {
+const CategorySearch = ({ search, setSearch }) => {
   return (
-    <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 mb-4">
-      
-       <InputField placeholder="search" value={search} onChange={(e) => setSearch(e.target.value)} />
+    <div className="w-full">
+      <InputField
+        placeholder="Search..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 focus:bg-white"
+      />
     </div>
-   
-  )
-}
+  );
+};
 
-export default CategorySearch
+export default CategorySearch;

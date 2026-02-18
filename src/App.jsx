@@ -8,6 +8,7 @@ import Services from './Pages/Services/Services';
 import CategoryPage from './Pages/Category/CategoryPage';
 import SubCategoryPage from './Pages/SubCategory/SubCategoryPage';
 import EmailTemplateForm from './Pages/Mail/EmailTemplateForm';
+import SettingsPage from './Pages/Settings/SettingsPage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/category' element={<CategoryPage/>}/>
         <Route path='/subcategory' element={<SubCategoryPage/>}/>
         <Route path='/mail' element={<EmailTemplateForm/>}/>
+        <Route path='/settings' element={<SettingsPage/>}/>
       </Route>
     </Routes>
   );
